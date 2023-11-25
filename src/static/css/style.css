@@ -184,3 +184,39 @@ header {
         margin-top: 43px;
     }
 }
+
+
+/* Home page's latest blog posts section styles */
+.latest-blog-posts-section article{
+    background-color: #7bcc00;
+    color: #000 !important;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 5px;
+}
+.latest-blog-posts-section article:last-child{
+    margin-top: 0;
+}
+.latest-blog-posts-section a {
+    color: #000;
+}
+.latest-blog-posts-section h4{
+    margin: 0;
+}
+
+/* A single post styles */
+
+.single-post-section article{
+    background-color: #7bcc00;
+    color: #000 !important;
+    border-radius: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 5px;
+}
+.single-post-section a {
+    color: #000;
+}
+.single-post-section p{
+    text-align: justify;
+}

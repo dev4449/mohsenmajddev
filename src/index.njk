@@ -2,6 +2,13 @@
 layout: layout.njk
 title: Mohsen Majd
 desc: Software developer specializing in Angular, Java, SQL & Git.
+
+pagination:
+  data: collections.post
+  size: 5
+  reverse: true
+  alias: posts
+
 ---
 
 <div id="container">
@@ -133,7 +140,7 @@ desc: Software developer specializing in Angular, Java, SQL & Git.
                     <span>
                         <div><i class="fa-solid fa-graduation-cap fa-2xl"></i>
                             <span class="education-list-item-heading">Duolingo English Test</span>
-                            </div>
+                        </div>
                         <span class="education-list-item-body">
                             I recieved my Duolingo English Test certificate on March 2023 with an overall score of
                             130/160.
@@ -151,7 +158,7 @@ desc: Software developer specializing in Angular, Java, SQL & Git.
                     <span>
                         <div>
                             <i class="fa-solid fa-graduation-cap fa-2xl"></i>
-                            <span class="experience-list-item-heading">XFilPak Inc - Aug 2021 - Present</span>    
+                            <span class="experience-list-item-heading">XFilPak Inc - Aug 2021 - Present</span>
                         </div>
                         <span class="experience-list-item-body">
                             At XFilPak, I had the opportunity to design and develop the company's main website from
@@ -162,5 +169,30 @@ desc: Software developer specializing in Angular, Java, SQL & Git.
                 </li>
             </ul>
         </div>
+    </div>
+</div>
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col latest-blog-posts-section">
+        <!-- Latest Blog Posts Section -->
+
+        <h3>Latest Blog Posts</h3>
+        {% for post in posts %}
+        <article>
+            <h4>
+                <a href="{{post.url | url }}">{{ post.data.title }}</a>
+            </h4>
+            <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+            <p>
+                {{ post.data.page.excerpt }}
+
+            </p>
+            <a href="{{post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
+
+        </article>
+        {% endfor %}
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+
     </div>
 </div>

@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+---
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--9-col single-post-section">
+        <article>
+            <h1>
+                <a href="{{post.url | url }}">{{ title }}</a>
+
+            </h1>
+            <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+            <p>
+                {{ content | safe }}
+            </p>
+        </article>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+
+    </div>
+</div>
