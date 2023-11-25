@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-blue.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    <script src="https://kit.fontawesome.com/78b5da6531.js" crossorigin="anonymous"></script>
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div>
+        <div class="mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout-icon"></div>
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout__title">Mohsen Majd</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href="/">Home</a>
+                        <a class="mdl-navigation__link" href="#">My Portfolio</a>
+                        <a class="mdl-navigation__link" href="https://www.linkedin.com/in/mohsen-salahshoor/">My Linkedin</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout__title">Mohsen Majd</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="/">Home</a>
+                    <a class="mdl-navigation__link" href="#">My Portfolio</a>
+                    <a class="mdl-navigation__link" href="https://www.linkedin.com/in/mohsen-salahshoor/">My Linkedin</a>
+               </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <!-- Grab the content from the page data, dump it here, and mark it as safe -->
+                <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe --> {{ content | safe }}
+            </main>
+
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">
+                        Designed &amp; Developed With <a href="https://www.11ty.dev/">Eleventy</a> By Mohsen Majd 
+                        
+                    </div>  
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <div class="mdl-logo">
+                        <i class="fa-solid fa-envelope fa-2xl"></i> 
+                        <a href="mailto:mohsen.salahshoor130@gmail.com">mohsen.salahshoor130@gmail.com</a>
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                        _mohsensalahshoor_
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
+                        <a href="https://github.com/dev4449">dev4449</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

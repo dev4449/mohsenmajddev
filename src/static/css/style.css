@@ -1,0 +1,186 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+}
+
+header {
+    background-color: #7bcc00 !important;
+}
+
+header a,
+header {
+    color: black !important;
+}
+
+.my-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #7bcc00;
+}
+
+/* #main-animation {
+    margin-right: auto;
+    margin-left: auto;
+} */
+
+.text-center {
+    text-align: center;
+}
+
+.main-skill-block {
+    text-align: center;
+    width: 130px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    background-color: #7bcc00;
+    border-radius: 10px 10px 10px 50px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.main-skill-block:last-child {
+    margin-left: 0;
+}
+
+.main-skill-block>span {
+    font-size: 1.2em;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.main-skill-block i {
+    color: #000;
+}
+
+.prac-skill-block-container {
+    margin-top: 8px;
+}
+
+.prac-skill-block {
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    height: 50px;
+    color: #000;
+    background-color: #7bcc00;
+    line-height: 50px;
+    border-radius: 10px 10px 10px 50px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.prac-skill-block:last-child {
+    margin-right: 0;
+}
+
+.prac-skill-block {
+    font-weight: bold;
+}
+
+.education-list,
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-list>li,
+.experience-list>li {
+    background-color: #7bcc00;
+    color: #000 !important;
+    margin-top: 15px !important;
+    border-radius: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 5px;
+}
+
+.education-list a,
+.experience-list a {
+    color: #000;
+}
+
+.education-list:first-child,
+.experience-list:first-child {
+    margin-top: none;
+}
+
+.education-list i,
+.experience-list i {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+.education-list-item-heading,
+.experience-list-item-heading {
+    font-size: 1.3em !important;
+}
+
+.education-list-item-body,
+.experience-list-item-body {
+    font-size: 1.1em !important;
+    margin-top: 10px;
+    line-height: 20px !important;
+}
+
+/* Overriding MDL styles */
+
+.mdl-layout__title{
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+}
+
+.mdl-layout__drawer-button {
+    background-color: #7bcc00;
+    border-radius: 5px;
+
+}
+
+.mdl-layout__content {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+}
+
+.mdl-mini-footer {
+    background-color: #7bcc00;
+    color: rgb(66, 66, 66);
+}
+
+.mdl-layout__drawer-button>i {
+    color: #000000;
+}
+
+.mdl-logo,
+.mdl-logo a {
+    color: black;
+}
+
+.mdl-layout__drawer,
+.mdl-layout__drawer a {
+    background-color: #7bcc00;
+    color: #000 !important;
+
+}
+
+/* Responsiveness Styles */
+@media only screen and (max-width: 1024px) {
+
+    .main-skill-block,
+    .prac-skill-block {
+        margin-top: 5px;
+    }
+
+    .mdl-layout__drawer-button>i {
+        color: #000;
+    }
+
+    .main-page-heading {
+        margin-top: 43px;
+    }
+}
