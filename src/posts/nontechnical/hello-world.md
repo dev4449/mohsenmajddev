@@ -10,7 +10,7 @@ Hello👋. My name is Mohsen Salahshour Majd. I'm a freelance software developer
 
 I started my career as a remote web designer in a canadian company called XFilPak Inc. This company specializes in manufacturing industrial packaging machinery. I was responsible to design and develop the company's main website from scratch. You can view the website at xfilpak.ca.
 
-I'm a software developer, but I professionally try to specialize in and around Java, Angular, SQL and git. Regarding experience, in spite of my experience at XFilPak Inc, I completed various courses and learning paths. For instance, the Front-end Development learning path and the Git & Version Control course provided by Educative Inc. 
+I'm a software developer, but I professionally try to specialize in and around Nest.js, Reactjs, Relational DB and Graph DB(Neo4j). Regarding experience, in spite of my experience at XFilPak Inc, I completed various courses and learning paths. For instance, the Front-end Development learning path and the Git & Version Control course provided by Educative Inc. 
 
 In my opinion, having a high level of the English language can have a significant positive impact on a software developer's career. Therefore, I've put excessive effort into learning English so far. As a proof of my command of English, I acquired the IELTS and Duolingo certificates. Delivering a 6.5/9 in IELTs and a 130/160 in Duolingo. 
 
