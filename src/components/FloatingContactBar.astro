@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+
+const currentLocale = Astro.currentLocale;
+---
+
+<div
+  class="hidden px-4 lg:flex items-center justify-between rotate-90 h-[50px] w-[550px] rounded-b-lg bg-lime-400 text-slate-950 fixed origin-[100%_0%] top-[95%] end-0 z-50"
+>
+  <div>
+    <div class="lg:inline-block">
+      <Icon
+        name="fluent:view-desktop-mobile-20-regular"
+        class="text-3xl inline-block rotate-[-90deg]"
+      />
+      <a href="tell:+989917567442">
+        {currentLocale === "fa-IR" ? "+۹۸۹۹۱۷۵۶۷۴۴۲" : "+989917567442"}
+      </a>
+    </div>
+    <div class="lg:inline-block ms-4">
+      <Icon
+        name="fluent:mail-arrow-up-24-filled"
+        class="text-3xl inline-block rotate-[-90deg]"
+      />
+      <a href="mailto:mohsen.salahshoor130@gmail.com"
+        >mohsen.salahshoor130@gmail.com</a
+      >
+    </div>
+  </div>
+  <div class="flex justify-end gap-4">
+    <a href="https://www.linkedin.com/in/mohsen-salahshoor">
+      <Icon name="cib:linkedin" class="text-2xl inline-block rotate-[-90deg]" />
+    </a>
+    <a href="https://github.com/dev4449">
+      <Icon name="cib:github" class="text-2xl inline-block rotate-[-90deg]" />
+    </a>
+  </div>
+</div>

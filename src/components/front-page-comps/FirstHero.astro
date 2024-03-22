@@ -1,0 +1,24 @@
+---
+import myPhoto from "../../assets/images/front-page/me.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="px-4 lg:px-24 pt-16 text-slate-950 relative">
+  <div class="w-full lg:w-2/3">
+    <Image
+      src={myPhoto}
+      alt="my photo"
+      width="150"
+      class="rounded-lg border-4 border-lime-400"
+    />
+    <h1 class="text-6xl mt-4">
+      Hello, I'm<br />Mohsen Salahshour Majd
+    </h1>
+    <p class="text-2xl mt-6 font-light">
+      Web developer capable of building various web solutions with 3 years of
+      work experience. I possess a bachelor's degree in Information Technology
+      and an advanced level of English. I utilize Typescript as the programming
+      language.
+    </p>
+  </div>
+</section>

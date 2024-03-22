@@ -1,0 +1,40 @@
+---
+const { class: className, ...rest } = Astro.props;
+import { Icon } from "astro-icon/components";
+
+const currentLocale = Astro.currentLocale;
+---
+
+<section
+  class=`${className} flex items-center justify-between h-[130px] lg:h-[50px] px-2 lg:px-4 bg-lime-400 text-slate-950`
+  {...rest}
+>
+  <div class="flex flex-wrap gap-4 w-4/5">
+    <div class="lg:inline-block">
+      <Icon
+        name="fluent:view-desktop-mobile-20-regular"
+        class="text-3xl inline-block"
+      />
+      <a href="tell:+989917567442">
+        {currentLocale === "fa-IR" ? "+۹۸۹۹۱۷۵۶۷۴۴۲" : "+989917567442"}
+      </a>
+    </div>
+    <div class="lg:inline-block">
+      <Icon
+        name="fluent:mail-arrow-up-24-filled"
+        class="text-3xl inline-block"
+      />
+      <a href="mailto:mohsen.salahshoor130@gmail.com"
+        >mohsen.salahshoor130@gmail.com</a
+      >
+    </div>
+  </div>
+  <div class="flex flex-wrap justify-center lg:justify-end gap-4 w-1/5">
+    <a href="https://www.linkedin.com/in/mohsen-salahshoor">
+      <Icon name="cib:linkedin" class="text-2xl inline-block" />
+    </a>
+    <a href="https://github.com/dev4449">
+      <Icon name="cib:github" class="text-2xl inline-block" />
+    </a>
+  </div>
+</section>

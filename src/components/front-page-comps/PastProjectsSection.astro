@@ -1,0 +1,131 @@
+---
+import xfilpakLogo from "../../assets/images/front-page/xfilpak-logo.svg";
+import elmLogo from "../../assets/images/front-page/elm-logo.png";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="p-4 lg:py-8 text-slate-950" id="projects-section">
+  <h2 class="text-center text-6xl">Past Experiences</h2>
+  <div class="mt-16 flex flex-wrap justify-center">
+    <ul class="w-full lg:w-1/2 text-xl">
+      <li class="p-4 rounded-xl bg-lime-400">
+        <div class="flex justify-end items-center">
+          <div class="text-end">
+            <h3 class="text-4xl">Estetly</h3>
+            <p class="text-base mt-1">February 2024 to Present</p>
+          </div>
+        </div>
+        <ul class="mt-6">
+          <li class="flex gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              A company based in France specializing in beauty and health
+              products and services.
+            </p>
+          </li>
+          <li class="flex mt-4 gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              I designed and developed a back-end and a landing page project for
+              the company from scratch.
+            </p>
+          </li>
+          <li class="flex mt-4 gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              During the development of projects, I faced challenges that were
+              potentially difficult to solve, but I managed to solve and deliver
+              the projects on time.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li class="mt-3 p-4 rounded-xl bg-lime-400">
+        <div class="flex justify-between items-center">
+          <Image
+            src={xfilpakLogo}
+            alt="photo of the logo of the xfilpak company"
+            class="w-[120px] lg:w-[150px] bg-white"
+          />
+          <div class="text-end">
+            <h3 class="text-4xl">XFilPak INC</h3>
+            <p class="text-base mt-1">September 2021 to Present</p>
+            <a class="text-base mt-1 underline" href="https://xfilpak.ca"
+              >https://xfilpak.ca</a
+            >
+          </div>
+        </div>
+
+        <ul class="mt-6">
+          <li class="flex gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              A company based in Montreal, QC, Canada, specializing in
+              manufacturing industrial pacakaging machineries.
+            </p>
+          </li>
+          <li class="w-full flex mt-4 gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              I designed and developed the company's website from scratch and
+              evolved the website during the past two years.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li class="mt-3 p-4 rounded-xl bg-lime-400">
+        <div class="flex justify-between items-center">
+          <Image
+            src={elmLogo}
+            alt="photo of the logo of the elm project"
+            class="w-[120px] lg:w-[150px]"
+          />
+          <div>
+            <h3 class="text-4xl text-end">ELM</h3>
+            <p class="text-base mt-1">December 2023 to Present</p>
+            <a
+              class="text-base mt-1 underline"
+              href="https://elm-silk.vercel.app/"
+              >https://elm-silk.vercel.app/</a
+            >
+          </div>
+        </div>
+
+        <ul class="mt-6">
+          <li class="flex gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              A personal project that is simply a searchable directory of
+              scientific concepts. Each concept has an explanation that is easy
+              and straightforward to understand. Additionally, each concept has
+              a few questions to test the understanding of the concept.
+            </p>
+          </li>
+          <li class="w-full flex gap-x-4 lg:gap-x-0 mt-4 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-4xl" />
+            </div>
+            <p class="w-11/12">
+              This project consists of three units, the front-end, the back-end
+              and an admin panel to manage the content of the website. I
+              designed and developed all three units from scratch.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
