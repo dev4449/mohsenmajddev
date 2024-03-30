@@ -1,6 +1,6 @@
 ---
-// Supports weights 200-700
-import "@fontsource-variable/oswald";
+// Supports weights 400-700
+import "@fontsource-variable/lora";
 interface Props {
   title: string;
   description: string;
@@ -28,3 +28,8 @@ const currentLocale = Astro.currentLocale;
     <slot />
   </body>
 </html>
+<style is:global>
+  html, body{
+    scroll-behavior: smooth;
+  }
+</style>

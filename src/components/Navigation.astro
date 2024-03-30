@@ -4,39 +4,29 @@ import myPhoto from "../assets/images/front-page/me.jpg";
 import { Image } from "astro:assets";
 ---
 
-<section class={className} {...rest}>
+<section class={`${className} px-6 bg-primary text-white`} {...rest}>
   <nav
     id="desktop-nav"
-    class="hidden lg:flex items-center justify-between h-[80px] text-2xl rounded-b-3xl"
+    class="hidden lg:flex items-center justify-between h-[80px] text-xl rounded-b-3xl"
   >
     <ul class="flex gap-x-6">
       <li>
-        <a href="/" class="pb-1 border-b-4 border-slate-950">Home</a>
+        <a href="/">Home</a>
       </li>
       <li>
-        <a
-          id="skills-section-link"
-          class="pb-1 border-b-4 border-slate-950 cursor-pointer">Skills</a
-        >
+        <a href="#skills-point" class="cursor-pointer">Skills</a>
       </li>
       <li>
-        <a
-          id="projects-section-link"
-          class="pb-1 border-b-4 border-slate-950 cursor-pointer"
-          >Past Projects</a
-        >
+        <a href="#projects-point" class="cursor-pointer">Past Projects</a>
       </li>
       <li>
-        <a
-          id="education-section-link"
-          class="pb-1 border-b-4 border-slate-950 cursor-pointer">Education</a
-        >
+        <a href="#education-point" class="cursor-pointer">Education</a>
       </li>
     </ul>
   </nav>
 
   <nav
-    class="hidden absolute top-0 left-[100px] h-screen w-[calc(100dvw-100px)] z-50 bg-lime-400 text-slate-950 text-2xl"
+    class="hidden absolute top-0 left-[100px] h-screen w-[calc(100dvw-100px)] z-50 bg-primary text-white text-2xl"
     id="mobile-nav"
   >
     <div class="mt-4 ms-4 font-bold text-2xl">
@@ -52,30 +42,30 @@ import { Image } from "astro:assets";
           <a href="/">Home</a>
         </li>
         <li class="mt-2">
-          <a id="skills-section-link-mobile">Skills</a>
+          <a href="#skills-point">Skills</a>
         </li>
         <li class="mt-2">
-          <a id="projects-section-link-mobile">Past Projects</a>
+          <a href="#projects-point">Past Projects</a>
         </li>
         <li class="mt-2">
-          <a id="education-section-link-mobile">Past Projects</a>
+          <a href="#education-point">Education</a>
         </li>
       </ul>
     </div>
   </nav>
   <div
     id="overlay"
-    class="hidden absolute top-0 left-0 h-screen w-full bg-slate-950/[0.3]"
+    class="hidden absolute top-0 left-0 h-screen w-full bg-violet-950/[0.3]"
   >
   </div>
   <div class="lg:hidden h-[80px] flex items-center">
     <svg
       id="nav-toggle"
       xmlns="<http://www.w3.org/2000/svg>"
-      class="ms-auto h-12 w-12 rounded-lg cursor-pointer bg-lime-400"
+      class="ms-auto h-12 w-12 rounded-lg cursor-pointer"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="#020617"
+      stroke="#ffffff"
     >
       <path
         stroke-linecap="round"
@@ -98,71 +88,5 @@ import { Image } from "astro:assets";
   overlay?.addEventListener("click", () => {
     mobileNav?.classList.add("hidden");
     overlay?.classList.add("hidden");
-  });
-
-  /* Scroll to section */
-  const skillsSectionLink = document.querySelector("#skills-section-link");
-  const projectsSectionLink = document.querySelector("#projects-section-link");
-  const educationSectionLink = document.querySelector(
-    "#education-section-link"
-  );
-
-  const skillsSectionLinkMobile = document.querySelector(
-    "#skills-section-link-mobile"
-  );
-  const projectsSectionLinkMobile = document.querySelector(
-    "#projects-section-link-mobile"
-  );
-  const educationSectionLinkMobile = document.querySelector(
-    "#education-section-link-mobile"
-  );
-
-  skillsSectionLink?.addEventListener("click", () => {
-    const element = document.querySelector("#skills-section");
-    const y = (element?.getBoundingClientRect().top ?? 0) + window.scrollY - 80;
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  });
-  projectsSectionLink?.addEventListener("click", () => {
-    const element = document.querySelector("#projects-section");
-    const y = (element?.getBoundingClientRect().top ?? 0) + window.scrollY - 80;
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  });
-  skillsSectionLinkMobile?.addEventListener("click", () => {
-    const element = document.querySelector("#skills-section");
-    const y = (element?.getBoundingClientRect().top ?? 0) + window.scrollY - 80;
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  });
-  projectsSectionLinkMobile?.addEventListener("click", () => {
-    const element = document.querySelector("#projects-section");
-    const y = (element?.getBoundingClientRect().top ?? 0) + window.scrollY - 80;
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  });
-  educationSectionLink?.addEventListener("click", () => {
-    const element = document.querySelector("#education-section");
-    const y = (element?.getBoundingClientRect().top ?? 0) + window.scrollY - 80;
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  });
-  educationSectionLinkMobile?.addEventListener("click", () => {
-    const element = document.querySelector("#education-section");
-    const y = (element?.getBoundingClientRect().top ?? 0) + window.scrollY - 80;
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
   });
 </script>

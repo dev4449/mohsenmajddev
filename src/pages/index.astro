@@ -22,22 +22,22 @@ import ThirdAnimation from "../components/front-page-comps/ThirdAnimation.astro"
     the fact that the ContactBar becomes fixed at the bottom of the screen
     when the user scrolls past the ContactBar.
   -->
-  <main class="pb-[130px] lg:pb-0 bg-slate-50">
+  <main class="pb-[130px] lg:pb-0 font-medium bg-primary text-white">
     <FloatingContactBar />
     <ContactBar id="contact-bar" />
-    <Navigation
-      id="navigation"
-      class="px-4 lg:px-24 text-slate-950 bg-lime-400"
-    />
+    <Navigation id="navigation" />
     <FirstHero />
     <Divider />
     <FirstAnimation />
+    <Divider id="skills-point" class="bg-inherit" />
     <SkillsSection />
     <Divider />
     <SecondAnimation />
+    <Divider id="projects-point" class="bg-inherit" />
     <PastProjectsSection />
     <Divider />
     <ThirdAnimation />
+    <Divider id="education-point" class="bg-inherit" />
     <EducationSection />
     <Footer />
   </main>

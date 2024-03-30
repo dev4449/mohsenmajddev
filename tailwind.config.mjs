@@ -5,7 +5,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Oswald Variable", ...defaultTheme.fontFamily.sans],
+        sans: ["Lora Variable", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        primary: "#2e1065",
+        secondary: "#35f95c",
       },
     },
   },
