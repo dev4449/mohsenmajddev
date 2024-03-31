@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
-
+import myPhoto from "../../../assets/images/front-page/me.jpg";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 export async function getStaticPaths() {
   const englishPosts = await getCollection("blog", ({ data }) => {
     return data.language === "en-US";
@@ -18,11 +20,21 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<Layout
-  description={entry.data.description}
-  title={entry.data.title}
->
-<h1>{entry.data.title}</h1>
-<Content />
 
+<Layout description={entry.data.description} title={entry.data.title}>
+  <article class="mt-8 px-8 prose lg:prose-xl prose-white">
+    <Image src={myPhoto} alt="my photo" width="110" class="rounded-lg not-prose" />
+    <h1 class="mt-3 text-6xl font-bold not-prose">{entry.data.title}</h1>
+    <p class="mt-3 mb-6 text-sm not-prose">
+      <Icon name="fluent:edit-32-filled" class="text-xl inline-block me-2" />
+      Written by Mohsen at
+      <Icon
+        name="fluent:calendar-12-filled"
+        class="text-xl inline-block mx-2"
+      />
+      {entry.data.publishDate.toString().slice(0, 10)}
+    </p>
+
+    <Content />
+  </article>
 </Layout>

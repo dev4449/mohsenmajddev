@@ -1,6 +1,9 @@
 ---
 // Supports weights 400-700
 import "@fontsource-variable/lora";
+import ContactBar from "../components/ContactBar.astro";
+import FloatingContactBar from "../components/FloatingContactBar.astro";
+import Navigation from "../components/Navigation.astro";
 interface Props {
   title: string;
   description: string;
@@ -25,7 +28,14 @@ const currentLocale = Astro.currentLocale;
     <meta name="description" content={description} />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
-  <body>
+  <!-- The bottom padding on mobile for the main tag is due to 
+    the fact that the ContactBar becomes fixed at the bottom of the screen
+    when the user scrolls past the ContactBar.
+  -->
+  <body class="pb-[130px] lg:pb-0 font-medium bg-primary text-white">
+    <FloatingContactBar />
+    <ContactBar id="contact-bar" />
+    <Navigation id="navigation" />
     <slot />
   </body>
 </html>

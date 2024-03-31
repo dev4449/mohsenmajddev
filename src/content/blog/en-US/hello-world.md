@@ -9,5 +9,6 @@ image:
   alt: "fake image"
 ---
 
-#Hello World
-Hello, this is my first post.
+Hello, this is Mohsen. In this blog, I'll share useful experiences during work, life, and everything in between.
+
+Check out my blog from time to time to learn useful stuff about software development, technology, etc.
