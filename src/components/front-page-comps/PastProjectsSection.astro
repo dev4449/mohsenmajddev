@@ -1,6 +1,8 @@
 ---
 import xfilpakLogo from "../../assets/images/front-page/xfilpak-logo.svg";
 import elmLogo from "../../assets/images/front-page/elm-logo.png";
+import estetlyLogo from "../../assets/images/front-page/estetly-logo.png";
+
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 ---
@@ -10,7 +12,12 @@ import { Icon } from "astro-icon/components";
   <div class="mt-16 flex flex-wrap justify-center">
     <ul class="w-full lg:w-1/2 text-xl">
       <li class="p-4 lg:p-8 rounded-xl border-[1px] border-white">
-        <div class="flex justify-end items-center">
+        <div class="flex justify-between items-center">
+          <Image
+            src={estetlyLogo}
+            alt="photo of the logo of the xfilpak company"
+            class="w-[120px] lg:w-[150px] bg-white rounded"
+          />
           <div class="text-end">
             <h3 class="text-4xl">Estetly</h3>
             <p class="text-base mt-1">February 2024 to Present</p>

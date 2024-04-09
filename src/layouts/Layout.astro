@@ -45,3 +45,29 @@ const currentLocale = Astro.currentLocale;
     scroll-behavior: smooth;
   }
 </style>
+<script>
+  import "@dotlottie/player-component";
+  window.onscroll = function () {
+    onPageScroll();
+  };
+  function onPageScroll() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      /* document
+        ?.getElementById("navigation")
+        ?.classList.add("w-full", "z-10", "fixed", "top-0"); */
+      document
+        ?.getElementById("contact-bar")
+        ?.classList.add("fixed", "bottom-0", "z-10", "lg:hidden");
+    } else {
+      /* document
+        ?.getElementById("navigation")
+        ?.classList.remove("w-full", "z-10", "fixed"); */
+      document
+        ?.getElementById("contact-bar")
+        ?.classList.remove("fixed", "bottom-0", "z-10", "lg:hidden");
+    }
+  }
+</script>
