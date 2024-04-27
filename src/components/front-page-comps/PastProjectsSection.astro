@@ -1,7 +1,8 @@
 ---
 import xfilpakLogo from "../../assets/images/front-page/xfilpak-logo.svg";
-import elmLogo from "../../assets/images/front-page/elm-logo.png";
+//import elmLogo from "../../assets/images/front-page/elm-logo.png";
 import estetlyLogo from "../../assets/images/front-page/estetly-logo.png";
+import sefrTaSadGroup from "../../assets/images/front-page/0ta100group-logo.png";
 
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
@@ -54,19 +55,17 @@ import { Icon } from "astro-icon/components";
           </li>
         </ul>
       </li>
-      <li
-        class="mt-10 p-4 lg:p-8 rounded-xl border-[1px] border-white"
-      >
+      <li class="mt-10 p-4 lg:p-8 rounded-xl border-[1px] border-white">
         <div class="flex justify-between items-center">
           <Image
             src={xfilpakLogo}
             alt="photo of the logo of the xfilpak company"
             class="w-[120px] lg:w-[150px] bg-white rounded"
           />
-          <div class="text-end ">
+          <div class="text-end">
             <h3 class="text-4xl">XFilPak INC</h3>
             <p class="text-base mt-1">September 2021 to Present</p>
-            <a class="text-base mt-1 underline" href="https://xfilpak.ca"
+            <a target="_blank" class="text-base mt-1 underline" href="https://xfilpak.ca"
               >https://xfilpak.ca</a
             >
           </div>
@@ -94,6 +93,43 @@ import { Icon } from "astro-icon/components";
         </ul>
       </li>
       <li class="mt-10 p-4 lg:p-8 rounded-xl border-[1px] border-white">
+        <div class="flex justify-between items-center">
+          <Image
+            src={sefrTaSadGroup}
+            alt="photo of the logo of the 0ta100group company"
+            class="w-[70px] lg:w-[100px] bg-white p-2 rounded"
+          />
+          <div class="text-end">
+            <h3 class="text-4xl">0TA100 GROUP</h3>
+            <p class="text-base mt-1">March 2024 to Present</p>
+            <a target="_blank" class="text-base mt-1 underline" href="https://0ta100group.com"
+              >https://0ta100group.com</a
+            >
+          </div>
+        </div>
+
+        <ul class="mt-6">
+          <li class="flex gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-3xl" />
+            </div>
+            <p class="w-11/12">
+              A local company in my hometown that specializes in constructing
+              Light Steel Frame (LSF) buildings.
+            </p>
+          </li>
+          <li class="w-full flex mt-4 gap-x-4 lg:gap-x-0 items-center">
+            <div class="w-1/12">
+              <Icon name="fluent:checkmark-12-filled" class="text-3xl" />
+            </div>
+            <p class="w-11/12">
+              I designed and developed the company's website from scratch and it
+              is being evolved yet.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <!-- <li class="mt-10 p-4 lg:p-8 rounded-xl border-[1px] border-white">
         <div class="flex justify-between items-center">
           <Image
             src={elmLogo}
@@ -134,7 +170,7 @@ import { Icon } from "astro-icon/components";
             </p>
           </li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </div>
 </section>
