@@ -8,8 +8,8 @@ export default {
         sans: ["Lora Variable", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#2e1065",
-        secondary: "#35f95c",
+        primary: "#0f172a",
+        secondary: "#dc2626",
       },
       typography: ({ theme }) => ({
         white: {
