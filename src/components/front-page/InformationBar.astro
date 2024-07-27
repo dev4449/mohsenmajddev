@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+import { useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section
+  class="h-[100px] lg:h-[75px] px-5 flex flex-wrap gap-y-2 gap-x-4 content-center bg-primary text-white"
+  id="information-bar-section"
+>
+  <div class="flex gap-x-2">
+    <Icon name="ic:baseline-phone-iphone" width={23} height={23} />
+    <p class="mt-[2px]">
+      {t("General.CellPhoneNumber")}
+    </p>
+  </div>
+  <div class="flex gap-x-2">
+    <Icon name="ic:round-email" width={23} height={23} />
+    <p class="mt-[2px]">
+      {t("General.EmailAddress")}
+    </p>
+  </div>
+</section>

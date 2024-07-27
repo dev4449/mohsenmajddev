@@ -1,0 +1,9 @@
+---
+const { lang } = Astro.props;
+---
+
+<div>
+  <a id="faButton" class={`${lang === "fa_IR" ? "text-gray-400" : ""}`} href="/fa-IR">FA</a>
+  <span>|</span>
+  <a id="enButton" class={`${lang === "en_US" ? "text-gray-400" : ""}`} href="/en-US">EN</a>
+</div>

@@ -1,0 +1,83 @@
+---
+import { Icon } from "astro-icon/components";
+import logoImage from "../assets/logo.jpg";
+import { Image } from "astro:assets";
+import { useTranslations } from "../i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+const { lang } = Astro.props;
+
+const t = useTranslations(lang);
+---
+
+<section
+  class="lg:hidden flex items-center justify-between h-[80px] bg-secondary text-white px-5"
+>
+  <strong class="text-xl">
+    {t("General.SiteTitle")}
+  </strong>
+  <LanguageSwitcher {lang} />
+  <Icon name="ic:sharp-menu" width={36} height={36} id="mobile-navbar-toggle" />
+</section>
+
+<div
+  class="hidden bg-secondary/[.3] fixed top-0 start-0 w-dvw h-dvh z-20"
+  id="mobile-navbar-overlay"
+>
+</div>
+
+<nav
+  class="hidden bg-primary fixed top-0 end-0 w-[calc(100dvw-100px)] h-dvh z-30"
+  id="mobile-navbar"
+>
+  <Image
+    src={logoImage}
+    class={"mx-auto w-2/3 mt-20"}
+    alt={t("Navbar.LogoImageAlt")}
+  />
+
+  <ul class="flex flex-col mt-6 ms-7 text-xl text-white gap-y-2 font-bold">
+    <li>
+      <a href="#information-bar-section" id="information-bar-link">
+        {t("General.FrontPage")}
+      </a>
+    </li>
+    <li>
+      <a href="#work-experiences-section" id="work-experiences-link">
+        {t("General.WorkExperiences")}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  document
+    .getElementById("mobile-navbar-toggle")
+    ?.addEventListener("click", () => {
+      document.getElementById("mobile-navbar")?.classList.toggle("hidden");
+      document
+        .getElementById("mobile-navbar-overlay")
+        ?.classList.toggle("hidden");
+    });
+
+  function hideNavbar() {
+    document.getElementById("mobile-navbar")?.classList.add("hidden");
+    document.getElementById("mobile-navbar-overlay")?.classList.add("hidden");
+  }
+
+  document
+    .getElementById("mobile-navbar-overlay")
+    ?.addEventListener("click", () => {
+      hideNavbar();
+    });
+
+  document.getElementById("work-experiences-link")?.addEventListener("click", () => {
+    hideNavbar();
+  });
+
+  document
+    .getElementById("information-bar-link")
+    ?.addEventListener("click", () => {
+      hideNavbar();
+    });
+</script>

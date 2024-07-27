@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import { useTranslations } from "../../i18n/utils";
+import estetlyLogoImage from "../../assets/front-page/estetly-logo.png";
+import sefrTaSadGroupLogoImage from "../../assets/front-page/0ta100group-logo.png";
+import xfilpakLogoImage from "../../assets/front-page/xfilpak-logo.png";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-24 px-5 lg:px-[30%] flex flex-col gap-y-6" id="work-experiences-section">
+  <h2 class="text-4xl text-center lg:text-5xl">
+    {t("WorkExperiences.Title")}
+  </h2>
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7 mt-10"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("WorkExperiences.First.Company")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("WorkExperiences.First.Location")}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image
+        src={estetlyLogoImage}
+        alt="estetly's logo"
+        class="w-full rounded-lg"
+      />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("WorkExperiences.First.Description")}
+    </p>
+  </div>
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("WorkExperiences.Second.Company")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("WorkExperiences.Second.Location")}
+      </p>
+      
+      <p class="text-lg mt-1">
+        <a href="https://0ta100group.com" target="_blank">www.0ta100group.com</a>
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image
+        src={sefrTaSadGroupLogoImage}
+        alt="0 ta 100 group's logo"
+        class="w-2/3 ms-auto rounded-lg"
+      />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("WorkExperiences.Second.Description")}
+    </p>
+  </div>
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("WorkExperiences.Third.Company")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("WorkExperiences.Third.Location")}
+      </p>
+      <p class="text-lg mt-1">
+        <a href="https://xfilpak.ca" target="_blank">www.xfilpak.ca</a>
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image
+        src={xfilpakLogoImage}
+        alt="xfilpak's logo"
+        class="w-full"
+      />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("WorkExperiences.Third.Description")}
+    </p>
+  </div>
+</section>

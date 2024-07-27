@@ -1,0 +1,29 @@
+---
+import DesktopNavbar from "../../components/DesktopNavbar.astro";
+import EducationSection from "../../components/front-page/EducationSection.astro";
+import FirstSection from "../../components/front-page/FirstSection.astro";
+import Footer from "../../components/front-page/Footer.astro";
+import InformationBar from "../../components/front-page/InformationBar.astro";
+import SkillsSection from "../../components/front-page/SkillsSection.astro";
+import SoftSkillsSection from "../../components/front-page/SoftSkillsSection.astro";
+import WorkExperiences from "../../components/front-page/WorkExperiences.astro";
+import MobileNavbar from "../../components/MobileNavbar.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Layout from "../../layouts/Layout.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="" description="">
+  <main class="bg-secondary text-white">
+    <InformationBar {lang} />
+    <DesktopNavbar {lang} />
+    <MobileNavbar {lang} />
+    <FirstSection {lang} />
+    <WorkExperiences {lang} />
+    <SkillsSection {lang} />
+    <EducationSection {lang} />
+    <SoftSkillsSection {lang} />
+    <Footer {lang} />
+  </main>
+</Layout>

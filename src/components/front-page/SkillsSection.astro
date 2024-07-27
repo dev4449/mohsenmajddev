@@ -1,0 +1,24 @@
+---
+import { useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-24 px-5 lg:px-[30%] flex flex-col gap-y-[4rem] items-center">
+  <h2 class="text-4xl lg:text-5xl">
+    {t("SkillsSection.Title")}
+  </h2>
+  <div class="flex gap-y-5 gap-x-3 flex-wrap justify-center lg:text-lg">
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Next.js</span>
+    <span class="border-[1px] border-white rounded-lg px-5 py-2"
+      >TypeScript</span
+    >
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Tailwind</span>
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Astro</span>
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Git</span>
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Linux</span>
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Figma</span>
+    <span class="border-[1px] border-white rounded-lg px-5 py-2">Axure RP</span>
+  </div>
+</section>

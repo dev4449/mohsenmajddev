@@ -1,0 +1,49 @@
+---
+import { getLangFromUrl } from "../i18n/utils";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html
+  lang={lang === "en_US" ? "en-US" : "fa-IR"}
+  dir={lang === "en_US" ? "ltr" : "rtl"}
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html{
+    scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: "IRANSansX";
+    src: url("/fonts/IRANSansX-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IRANSansX";
+    src: url("/fonts/IRANSansX-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

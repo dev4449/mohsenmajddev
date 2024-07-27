@@ -1,0 +1,23 @@
+---
+import { useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-24 px-5 lg:px-[30%] flex flex-col gap-y-[4rem] items-center">
+  <h2 class="text-4xl lg:text-5xl">
+    {t("SoftSkillsSection.Title")}
+  </h2>
+  <div class="flex gap-y-5 gap-x-3 flex-wrap justify-center lg:text-lg">
+    <span class="border-[1px] border-white rounded-lg px-5 py-2"
+      >{t("SoftSkillsSection.First")}</span
+    >
+    <span class="border-[1px] border-white rounded-lg px-5 py-2"
+      >{t("SoftSkillsSection.Second")}</span
+    >
+    <span class="border-[1px] border-white rounded-lg px-5 py-2"
+      >{t("SoftSkillsSection.Third")}</span
+    >
+  </div>
+</section>

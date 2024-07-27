@@ -1,0 +1,123 @@
+---
+import graduationImage from "../../assets/front-page/graduation.png";
+import educativeLogo from "../../assets/front-page/educative-logo.png";
+import ieltsLogo from "../../assets/front-page/ielts-logo.png";
+import duolingoLogo from "../../assets/front-page/duolingo-logo.png";
+
+import Image from "astro/components/Image.astro";
+import { useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-24 px-5 lg:px-[30%] flex flex-col gap-y-6">
+  <h2 class="text-4xl text-center lg:text-5xl">
+    {t("EducationSection.Title")}
+  </h2>
+
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7 mt-10"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("EducationSection.First.Title")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("EducationSection.First.Subtitle")}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image
+        src={graduationImage}
+        alt="graduation cap"
+        class="w-full rounded-lg"
+      />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("EducationSection.First.Description")}
+    </p>
+  </div>
+
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("EducationSection.Second.Title")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("EducationSection.Second.Subtitle")}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image
+        src={educativeLogo}
+        alt="Educative Inc's logo"
+        class="w-full rounded-lg"
+      />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("EducationSection.Second.Description")}
+    </p>
+  </div>
+
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("EducationSection.Third.Title")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("EducationSection.Third.Subtitle")}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image
+        src={educativeLogo}
+        alt="Educative Inc's logo"
+        class="w-full rounded-lg"
+      />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("EducationSection.Third.Description")}
+    </p>
+  </div>
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("EducationSection.Fourth.Title")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("EducationSection.Fourth.Subtitle")}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image src={ieltsLogo} alt="IELTS Logo" class="w-full rounded-lg" />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("EducationSection.Fourth.Description")}
+    </p>
+  </div>
+  <div
+    class="border-[1px] border-white rounded-xl p-5 flex justify-between flex-wrap gap-y-7"
+  >
+    <div class="w-3/5 lg:w-4/5">
+      <h3 class="text-xl">
+        {t("EducationSection.Fifth.Title")}
+      </h3>
+      <p class="text-lg mt-1">
+        {t("EducationSection.Fifth.Subtitle")}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-1/5">
+      <Image src={duolingoLogo} alt="Duolingo Logo" class="w-full rounded-lg " />
+    </div>
+    <p class="w-full text-justify text-lg">
+      {t("EducationSection.Fifth.Description")}
+    </p>
+  </div>
+</section>

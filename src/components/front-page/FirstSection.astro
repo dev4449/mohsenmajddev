@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets";
+import logoImage from "../../assets/logo.jpg";
+
+import firstMobileBackground from "../../assets/front-page/background-mobile-1.jpeg";
+import secondMobileBackground from "../../assets/front-page/background-mobile-2.jpeg";
+import thirdMobileBackground from "../../assets/front-page/background-mobile-3.jpeg";
+
+import firstDesktopBackground from "../../assets/front-page/desktop-background-1.jpeg";
+import secondDesktopBackground from "../../assets/front-page/desktop-background-2.jpeg";
+import thirdDesktopBackground from "../../assets/front-page/desktop-background-3.jpeg";
+
+import { useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="h-[calc(100dvh-180px)] lg:h-[calc(100dvh-175px)] relative">
+  <div
+    class={`absolute bg-secondary/[.8] w-3/4 text-white py-10 top-28 rounded-xl 
+    start-1/2 ${lang === "fa_IR" ? "translate-x-1/2" : "-translate-x-1/2"}
+    text-center flex flex-col gap-y-5 items-center backdrop-blur z-10 lg:top-[32%] lg:w-2/5  
+    `}
+  >
+    <strong>
+      <h1 class="text-2xl">
+        {t("FirstSection.Title")}
+      </h1>
+    </strong>
+    <Image
+      src={logoImage}
+      class={"w-[150px] rounded-xl"}
+      alt={t("Navbar.LogoImageAlt")}
+    />
+    <p class="px-5 text-xl">
+      {t("FirstSection.SubTitle")}
+    </p>
+    <a
+      class="bg-primary w-1/2 lg:w-1/5 py-3 rounded-lg text-white text-lg font-bold"
+      href="#work-experiences-section"
+    >
+      {t("FirstSection.ButtonText")}
+    </a>
+  </div>
+
+  <swiper-container
+    class="w-full h-full"
+    slides-per-view="1"
+    speed="500"
+    loop="true"
+    effect="fade"
+    autoplay="true"
+    pagination="true"
+  >
+    <swiper-slide>
+      <div class="w-full h-full">
+        <Image
+          class="lg:hidden w-full h-full object-cover"
+          src={firstMobileBackground}
+          alt={t("FirstSection.SlideShowImageAlt")}
+        />
+        <Image
+          class="hidden lg:block w-full h-full object-cover"
+          src={firstDesktopBackground}
+          alt={t("FirstSection.SlideShowImageAlt")}
+        />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="w-full h-full">
+        <Image
+          class="lg:hidden w-full h-full object-cover"
+          src={secondMobileBackground}
+          alt={t("FirstSection.SlideShowImageAlt")}
+        />
+        <Image
+          class="hidden lg:block w-full h-full object-cover"
+          src={secondDesktopBackground}
+          alt={t("FirstSection.SlideShowImageAlt")}
+        />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="w-full h-full">
+        <Image
+          class="lg:hidden w-full h-full object-cover"
+          src={thirdMobileBackground}
+          alt={t("FirstSection.SlideShowImageAlt")}
+        />
+        <Image
+          class="hidden lg:block w-full h-full object-cover"
+          src={thirdDesktopBackground}
+          alt={t("FirstSection.SlideShowImageAlt")}
+        />
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>
+<script>
+  import { register } from "swiper/element/bundle";
+  register();
+</script>
+<style>
+  swiper-container::part(bullet-active) {
+    background-color: #65a30d;
+  }
+  swiper-container::part(bullet) {
+    background-color: #fff;
+    opacity: 1;
+  }
+  swiper-container::part(pagination) {
+    border-radius: 10px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.88);
+    width: 80px !important;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0 !important;
+    right: 0 !important;
+  }
+</style>

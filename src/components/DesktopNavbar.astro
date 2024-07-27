@@ -1,0 +1,32 @@
+---
+import { useTranslations } from "../i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section
+  class="hidden lg:flex bg-secondary text-white font-bold items-center h-[100px] px-8"
+>
+  <div class="flex items-center gap-x-10">
+    <strong class="text-2xl">
+      {t("General.SiteTitle")}
+    </strong>
+    <nav>
+      <ul class="flex gap-x-3 text-xl">
+        <li>
+          <a href="#information-bar-section" id="information-bar-link">
+            {t("General.FrontPage")}
+          </a>
+        </li>
+        <li>
+          <a href="#work-experiences-section" id="work-experiences-link">
+            {t("General.WorkExperiences")}
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <LanguageSwitcher {lang} />
+  </div>
+</section>
