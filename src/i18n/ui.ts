@@ -13,7 +13,8 @@ export const ui = {
     "FirstSection.SubTitle":
       "Front-End Developer proficient in TypeScript language and Next and Astro frameworks. Proficient in English at C1 level and holder of IELTS and Duolingo certificates.",
     "FirstSection.ButtonText": "View Resume",
-
+    "FirstSection.SlideShowImageAlt": "An image of the slideshow at the beginning of the website",
+    
     "WorkExperiences.Title": "Work Experiences",
 
     "WorkExperiences.First.Company": "Estetly",
